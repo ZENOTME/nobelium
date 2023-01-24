@@ -37,13 +37,13 @@ const BLOG = {
   },
   comment: {
     // support provider: gitalk, utterances, cusdis
-    provider: '', // leave it empty if you don't need any comment plugin
+    provider: 'gitalk', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: '', // The repository of store comments
-      owner: '',
-      admin: [],
-      clientID: '',
-      clientSecret: '',
+      repo: 'nobelium', // The repository of store comments
+      owner: 'ZENOTME',
+      admin: ['ZENOTME'],
+      clientID: process.env.NEXT_PUBLIC_COMMENT_CLIENT_ID,
+      clientSecret: process.env.NEXT_PUBLIC_COMMENT_CLIENT_SECRET,
       distractionFreeMode: false
     },
     utterancesConfig: {
